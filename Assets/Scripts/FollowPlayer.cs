@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FollowPlayer : MonoBehaviour
+{
+
+    public Transform playerTransform;
+    public float offset;
+
+    void Start()
+    {
+        
+    }
+
+
+    void Update()
+    {
+
+        Vector3 cameraPos =  transform.position;
+        cameraPos.z = playerTransform.position.z + offset;
+        transform.position = cameraPos;
+
+    }
+}
